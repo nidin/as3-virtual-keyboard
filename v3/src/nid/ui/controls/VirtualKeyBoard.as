@@ -127,7 +127,7 @@ package  nid.ui.controls
 			if (_stage!=null)
 			{
 				keyboard.build();
-				keyboard.y = _stage.stageHeight  - keyboard.height;
+				keyboard.y = isActive ? _stage.stageHeight  - keyboard.height : _stage.stageHeight + 50;
 			}
 		}
 		public function init(target:DisplayObject):void
@@ -149,6 +149,7 @@ package  nid.ui.controls
 		public function hide():void
 		{
 			Tweener.addTween(keyboard, {alpha:0, y:_stage.stageHeight + 50, time:0.5, transition:"easeOutQuart",onComplete:flush } );
+			dispatchEvent(new Event(Event.CLOSE));
 		}
 		private function flush():void
 		{
