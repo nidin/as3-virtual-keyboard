@@ -6,7 +6,7 @@
  */
 
 This program is written in Action Script 3
-and released under the GNU Lesser General Public License, version 3.0 (LGPL-3.0).
+and released under MIT License
 
 
 
